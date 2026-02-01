@@ -2,6 +2,6 @@
 
 I have it configured for 3 drives, change icons and mount points accordingly.
 
-Also, you'll to point the ascii route with your user.
+Place the ascii in the same folder as the config file (~/.config/fastfetch). Or change the pointer, idc.
 
 You can change the icons, just copy from the nerdfonts cheatsheet and replace.
