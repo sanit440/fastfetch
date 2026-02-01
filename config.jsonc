@@ -20,7 +20,7 @@
         },
         {
             "type": "command",
-            "key": " System",
+            "key": "│  System",
             "keyColor": "red",
             "text": "echo $USER@$HOSTNAME"
         },
@@ -71,7 +71,7 @@
         },
         {
             "type": "os",
-            "key": " OS",
+            "key": "│  OS",
             "keyColor": "yellow"
         },
         {
@@ -97,7 +97,7 @@
         "break",
         {
             "type": "de",
-            "key": " DE",
+            "key": "┌  DE",
             "keyColor": "blue"
         },
         {
@@ -127,18 +127,18 @@
         },
         {
             "type": "command",
-            "key": "│󱕅  OS Age ",
+            "key": "│ 󱕅  OS Age ",
             "keyColor": "magenta",
             "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
         },
         {
             "type": "uptime",
-            "key": "│  Uptime ",
+            "key": "│   Uptime ",
             "keyColor": "magenta"
         },
         {
             "type": "datetime",
-            "key": "│  Datetime ",
+            "key": "│   Datetime ",
             "keyColor": "magenta"
         },
         {
@@ -147,7 +147,7 @@
         },
         {
             "type": "colors",
-            "paddingLeft": 2,
+            "paddingLeft": 19,
             "symbol": "circle"
         }
     ]
