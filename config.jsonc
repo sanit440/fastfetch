@@ -1,0 +1,154 @@
+{
+    "logo": {
+        "type": "auto",
+        "source": "/home/sanit/.config/fastfetch/ssb.txt",
+        "color": {
+            "1": "red"
+        },
+        "height": 5,
+        "width": 5,
+        "padding": {
+            "top": 0,
+            "left": 0
+        }
+    },
+    "modules": [
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[31m\u001B[1m┌───────────────────── Hardware ─────────────────────┐"
+        },
+        {
+            "type": "command",
+            "key": " System",
+            "keyColor": "red",
+            "text": "echo $USER@$HOSTNAME"
+        },
+        {
+            "type": "cpu",
+            "key": "│ ├ CPU",
+            "keyColor": "red"
+        },
+        {
+            "type": "gpu",
+            "key": "│ ├󰢮 GPU",
+            "keyColor": "red"
+        },
+        {
+            "type": "memory",
+            "key": "│ ├󰘚 RAM",
+            "keyColor": "red"
+        },
+
+        {
+            "type": "disk",
+            "key": "│ ├󰋊 root",
+            "keyColor": "red",
+            "folders": ["/"]
+        },
+
+        {
+            "type": "disk",
+            "key": "│ ├󰋊 Games",
+            "keyColor": "red",
+            "folders": ["/mnt/F"]
+        },
+
+        {
+            "type": "disk",
+            "key": "│ └󰋊 Data",
+            "keyColor": "red",
+            "folders": ["/mnt/S"]
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[31m\u001B[1m└────────────────────────────────────────────────────┘"
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[33m\u001B[1m┌───────────────────── Software ─────────────────────┐"
+        },
+        {
+            "type": "os",
+            "key": " OS",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "kernel",
+            "key": "│ ├ Kernel",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "bios",
+            "key": "│ ├ BIOS",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "packages",
+            "key": "│ ├ Packages",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "shell",
+            "key": "└ └ Shell",
+            "keyColor": "yellow"
+        },
+        "break",
+        {
+            "type": "de",
+            "key": " DE",
+            "keyColor": "blue"
+        },
+        {
+            "type": "lm",
+            "key": "│ ├ Login",
+            "keyColor": "blue"
+        },
+        {
+            "type": "wm",
+            "key": "│ ├ Window",
+            "keyColor": "blue"
+        },
+
+        {
+            "type": "terminal",
+            "key": "│ └ Terminal",
+            "keyColor": "blue"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[34m\u001B[1m└──────────────── Desktop Enviroment ────────────────┘"
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[35m\u001B[1m┌───────────────── Age / Uptime / DT ────────────────┐"
+        },
+        {
+            "type": "command",
+            "key": "│󱕅  OS Age ",
+            "keyColor": "magenta",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+        },
+        {
+            "type": "uptime",
+            "key": "│  Uptime ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "datetime",
+            "key": "│  Datetime ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[35m\u001B[1m└────────────────────────────────────────────────────┘"
+        },
+        {
+            "type": "colors",
+            "paddingLeft": 2,
+            "symbol": "circle"
+        }
+    ]
+}
