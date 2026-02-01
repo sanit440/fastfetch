@@ -1,7 +1,7 @@
 {
     "logo": {
         "type": "auto",
-        "source": "/home/sanit/.config/fastfetch/ssb.txt",
+        "source": "$USER/.config/fastfetch/ssb.txt", #<- CHANGE THIS PATH
         "color": {
             "1": "red"
         },
