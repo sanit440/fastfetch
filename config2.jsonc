@@ -1,0 +1,155 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "~/.config/fastfetch/thinkpad.txt",
+        "type": "file",
+        "padding": {
+            "top": 1,
+            "left": 2,
+            "right": 4
+        }
+    },
+    "display": {
+        "separator": " \u001b[31m║\u001b[0m ",
+        "constants": [
+            // $1: Horizontal line
+            "═══════════════════════════════════════════════════════════════════════════════════",
+            // $2: Vertical jump
+            "\u001b[31m║\u001b[83C║\u001b[83D\u001b[0m"
+        ]
+    },
+    "modules": [
+        // --- HEADER SECTION ---
+        {
+            "type": "custom",
+            "format": "\u001b[31m╔{$1}╗" 
+        },
+        {
+            "type": "title",
+            // [Colors] User@Host [Colors]
+            "format": "{$2}                              \u001b[41m  \u001b[42m  \u001b[43m  \u001b[44m  \u001b[0m  \u001b[1;31m{user-name}\u001b[0m\u001b[90m@\u001b[0m\u001b[1;34m{host-name}\u001b[0m  \u001b[45m  \u001b[46m  \u001b[47m  \u001b[40m  \u001b[0m"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[31m╠{$1}╣"
+        },
+
+        // --- TIME & UPTIME ---
+        {   "type": "host",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[31m󰌢 Model  ",
+            "format":"{1}",
+        },
+
+        {
+            "type": "datetime",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[36m Date   ",
+        },
+        {
+            "type": "uptime",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[33m󰅐 Uptime "
+        },
+
+        // --- SOFTWARE ---
+        {
+            "type": "custom",
+            "format": "\u001b[31m╠{$1}╣"
+        },
+        {
+            "type": "os",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[31m󰣇 Distro ",
+            "format": "{2} {8}"
+        },
+        {
+            "type": "kernel",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[32m Kernel "
+        },
+        {
+            "type": "packages",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[33m󰏖 Pkgs   "
+        },
+        {
+            "type": "shell",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[36m Shell  "
+        },
+        {
+            "type": "lm",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[35m Login  "
+        },
+        {
+            "type": "de",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[34m󰇄 Desktop"
+        },
+
+        // --- HARDWARE ---
+        {
+            "type": "custom",
+            "format": "\u001b[31m╠{$1}╣"
+        },
+        {
+            "type": "cpu",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[32m󰍛 CPU    ",
+            "showPeCoreCount": true,
+            "temp": true
+        },
+        {
+            "type": "gpu",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[33m󰍛 GPU    ",
+            // Full Specs: Name @ Freq [Type]
+            "format": "{name} @ {frequency} [{type}]"
+        },
+        {
+            "type": "display",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[36m󰍹 Display",
+            // Full Specs: Name, Res, Hz, Inches
+            "format": "{name} {width}x{height} @ {refresh-rate}Hz {inch}\""
+        },
+
+
+        {
+            "type": "memory",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[35m Memory "
+        },
+        {
+            "type": "disk",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[31m󰉉 Disk   ",
+            "folders": "/"
+        },
+
+        // --- POWER & NET ---
+        {
+            "type": "custom",
+            "format": "\u001b[31m╠{$1}╣"
+        },
+        {
+            "type": "battery",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[32m battery",
+            "format": "{capacity} ({status})"
+        },
+        {
+            "type": "poweradapter",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[33m power  ",
+            "format": "{name}"
+        },
+        {
+            "type": "localip",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[34m󰩟 local  ",
+            "format": "{ipv4} ({ifname})"
+        },
+// disabled because it makes stuff slow
+        //        {
+//            "type": "netio",
+//            "key": "{$2}  \u001b[35m󰓅 netio  "
+//        },
+        {
+            "type": "wifi",
+            "key": "\u001b[0m\u001b[31m╠ \u001b[36m  wifi  ",
+            "format": "{ssid} ({signal-quality})"
+        },
+
+        // --- BOTTOM BORDER ---
+        {
+            "type": "custom",
+            "format": "\u001b[31m╚{$1}╝"
+        }
+    ]
+}
